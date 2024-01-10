@@ -1,6 +1,24 @@
 # TikTok
 Digital Nomad Identities on TikTok
-This paper studies attributes of the online identity of a niche group of highly mobile remote workers (here and after digital nomads, DNs) and how the algorithmic platform of TikTok shapes their online identity.
-This study uses a mixed method approach combining qualitative comparative content analysis with the affordance of computational digital media analysis. Using a set of predefined hashtags #digitalnomadlifestyle, ‘#digitalnomad,’ ‘#digitalnomadgirl,’ ‘#digitalnomadlife,’ ‘#remotework,’ ‘#travellife,’ ‘#workfromanywhere’, we collected TikTok video and author metadata utilizing unofficial TikAPI [(*TikAPI REST API*, 2023)](https://www.zotero.org/google-docs/?52sYIQ). To define the hashtags, we applied a non-probability sampling technique, snowballing, where a small pool of initial hashtags provides us with new co-existing hashtags and grows like a rolling snowball. We collected data on two occasions, one in January 2023 and one in April 2023. After cleaning and preprocessing the data, we compiled a dataset with 6010 unique video contributions created by 1857 unique contributors. 
+This paper studies attributes of the online identity of a niche group of highly mobile remote workers (here and after digital nomads, DNs) and how the social platform of TikTok shapes their online identity narratives.
+This study uses a mixed method approach combining qualitative content analysis with the affordance of computational SBMTM topic modeling analysis. 
 
-To complement any nuances of online identity style, we conduct a comparative content analysis of filtered-out duets (n= 10), a distinctive feature on the TikTok platform that allows users to create and share a split-screen video with another user's existing video content. We compared the expression style of the main contributor and those whose content they responded to. We chose to focus on the duets because their creators are already actively engaging in the TikTok meme practices with established online identities, thus making their profiles well-tailored for our analysis of online identity crafting.
+The Dataset
+The dataset is sourced from TikTok and collected through the unofficial [TIKAPI](https://tikapi.io/) using a set of specific hashtags:
+    
+    Hashtags
+    
+    - #digitalnomadlifestyle
+    - #digitalnomadlife
+    - #digitalnomad
+    - #remotework
+    - #travellife
+    - #workfromanywhere
+    
+TikTok API retrieves all available metadata for TikTok videos associated with a given hashtag and does not limit the results to a percentage of the total. 
+
+ **[TikAPI documentation](https://tikapi.io/documentation/#tag/Profile)**
+
+- The **`/hashtag/videos`** endpoint allows retrieving TikTok videos associated with a given hashtag. It returns a list of video objects containing metadata like ID, description, stats, etc.
+- There is no mention of limiting or sampling the results to a subset of available videos.
+- The pagination parameters allow retrieving all available results across multiple pages, implying full retrieval is possible.
