@@ -33,8 +33,18 @@ The above code has been executed six times, once for each hashtag. The collected
 **It's important to note that the data composition can vary over time due to new videos with related hashtags being added. Additionally, TikTok accounts and videos may be deleted, making reproducing the exact dataset at any given time challenging.**
 
 As a result, we have 6 JSON files, each corresponding to the video collection with at least one hashtag. The name of the hashtag is reflected in the name of the file. 
-We consolidated multiple JSON files containing scraped data on different hashtags into one comprehensive JSON file. We then create two data frames for each unit of the analysis.
+We consolidated multiple JSON files containing scraped data on different hashtags into one comprehensive JSON file that has a hierarchical structure; we work with the main dictionary called `itemList`, which contains:
 
+- 'author' metadata, representing TikTok creator information.
+- 'authorStats,' which contains statistics such as the number of followers and videos published.
+- id: The unique id of the video
+- desc: Description of the video
+- stats: View and like counts
+- author: Author info like avatar, id, nickname etc.
+- music: Details about the background music
+- video: Technical details about the video like resolution, size etc.
+
+We then create two data frames for each unit of the analysis:
 
 The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Video_Dataframe.ipynb) 
 -For the current state of our study we only use the dataset collected in September.
@@ -42,7 +52,7 @@ The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](htt
 The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
 -For the current state of our study we only use the dataset collected in September.
 
-#
+
 
 
 
