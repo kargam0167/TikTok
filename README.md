@@ -23,4 +23,14 @@ TikAPI retrieves all available metadata for TikTok videos associated with a give
 
 #The dataset
 
-The code Video_Dataframe.ipynb
+The code for creating a Video unit of analysis is here [Video_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Video_Dataframe.ipynb) 
+-For the current state of our study we only use the dataset collected in September.
+
+The code for creating an Author unit of analysis is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
+-For the current state of our study we only use the dataset collected in September.
+
+#
+
+
+
+
