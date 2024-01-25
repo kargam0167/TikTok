@@ -73,7 +73,7 @@ The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](htt
 The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
 -For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Video_DataFrame.ipynb).
 
-**TikTok Author**
+**TikTok Author Dataframe**
 | Fields | Description | Type |
 | --- | --- | --- |
 | authorId | ID number of the creator profile | Integer |
