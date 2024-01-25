@@ -40,17 +40,17 @@ We consolidated multiple JSON files containing scraped data on different hashtag
 - id: The unique id of the video
 - desc: Description of the video
 - stats: View and like counts
-- author: Author info like avatar, id, nickname etc.
+- author: Author info like avatar, id, nickname, etc.
 - music: Details about the background music
-- video: Technical details about the video like resolution, size etc.
+- video: Technical details about the video like resolution, size, etc.
 
 We then create two data frames for each unit of the analysis:
 
 The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Video_Dataframe.ipynb) 
--For the current state of our study we only use the dataset collected in September.
+-For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Author_DataFrame.ipynb).
 
 The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
--For the current state of our study we only use the dataset collected in September.
+-For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Video_DataFrame.ipynb).
 
 
 
