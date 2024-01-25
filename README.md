@@ -28,7 +28,7 @@ TikAPI retrieves all available metadata for TikTok videos associated with a give
 
 The code example [Collect_Hashtags.ipynb](https://github.com/kargam0167/TikTok/blob/main/Collect_hashtags.ipynb) collects data related to the hashtag "#travellife" from TikTok using the Tikapi library. It fetches a maximum of 50 pages of data related to the hashtag and handles possible exceptions that could occur during the process.
 
-The above code has been executed six times, once for each hashtag. The collected data was stored separately for every hashtag, each time adjusting the filename (e.g., 'digitalnomad.json') to reflect the respective hashtag.
+The above code has been executed six times, once for each hashtag mentioned above. The collected data is stored separately for every hashtag, each time adjusting the filename (e.g., 'digitalnomad.json') to reflect the respective hashtag.
 
 **It's important to note that the data composition can vary over time due to new videos with related hashtags being added. Additionally, TikTok accounts and videos may be deleted, making reproducing the exact dataset at any given time challenging.**
 
