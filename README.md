@@ -1,5 +1,4 @@
 #Digital Nomad Identities on TikTok
-This paper studies short video narratives on TikTok, marked with specific hashtags focusing on identity narratives, identity threats, and coping strategies to mitigate such threats. This study uses a mixed method approach combining qualitative content analysis with the affordance of computational SBMTM topic modeling analysis. 
 
 The Dataset
 The dataset is sourced from TikTok and collected through the unofficial [TIKAPI](https://tikapi.io/) using a set of specific hashtags:
@@ -17,14 +16,14 @@ TikAPI retrieves all available metadata for TikTok videos associated with a give
 
  **[TikAPI documentation](https://tikapi.io/documentation/#tag/Profile)**
 
-- The **`/hashtag/videos`** endpoint allows retrieving TikTok videos associated with a given hashtag. It returns a list of video objects containing metadata like ID, description, stats, etc.
+The **`/hashtag/videos`** endpoint allows you to retrieve TikTok videos associated with a given hashtag. It returns a list of video objects containing metadata like ID, description, stats, etc.
 - There is no mention of limiting or sampling the results to a subset of available videos.
-- The pagination parameters allow retrieving all available results across multiple pages, implying full retrieval is possible.
+- The pagination parameters allow retrieving all available results across multiple pages, implying that complete retrieval is possible.
 
 #The dataset
-- The **`/hashtag/videos`** endpoint allows retrieving TikTok videos associated with a given hashtag. It returns a list of video objects containing metadata like ID, description, stats, etc.
+- The **`/hashtag/videos`** endpoint retrieves TikTok videos associated with a given hashtag. It returns a list of video objects containing metadata like ID, description, stats, etc.
 - There is no mention of limiting or sampling the results to a subset of available videos.
-- The pagination parameters allow retrieving all available results across multiple pages, implying full retrieval is possible.
+- The pagination parameters allow retrieving all available results across multiple pages, implying that complete retrieval is possible.
 
 The code example [Collect_Hashtags.ipynb](https://github.com/kargam0167/TikTok/blob/main/Collect_hashtags.ipynb) collects data related to the hashtag "#travellife" from TikTok using the Tikapi library. It fetches a maximum of 50 pages of data related to the hashtag and handles possible exceptions that could occur during the process.
 
@@ -33,16 +32,16 @@ The above code has been executed six times, once for each hashtag mentioned abov
 **It's important to note that the data composition can vary over time due to new videos with related hashtags being added. Additionally, TikTok accounts and videos may be deleted, making reproducing the exact dataset at any given time challenging.**
 
 As a result, we have 6 JSON files, each corresponding to the video collection with at least one hashtag. The name of the hashtag is reflected in the name of the file. 
-We consolidated multiple JSON files containing scraped data on different hashtags into one comprehensive JSON file that has a hierarchical structure; we work with the main dictionary called `itemList`, which contains:
+We consolidated multiple JSON files containing scraped data on different hashtags into one comprehensive JSON file that has a hierarchical structure; we work with the main dictionary called `itemList,` which contains:
 
-- 'author' metadata, representing TikTok creator information.
+- 'author' metadata represents TikTok creator information.
 - 'authorStats,' which contains statistics such as the number of followers and videos published.
 - id: The unique id of the video
 - desc: Description of the video
 - stats: View and like counts
 - author: Author info like avatar, id, nickname, etc.
 - music: Details about the background music
-- video: Technical details about the video like resolution, size, etc.
+- video: Technical details about the video, such as resolution, size, etc.
 
 We then create two data frames for each unit of the analysis:
 
