@@ -1,6 +1,5 @@
 #Digital Nomad Identities on TikTok
 
-The Dataset
 The dataset is sourced from TikTok and collected through the unofficial [TIKAPI](https://tikapi.io/) using a set of specific hashtags:
     
     Hashtags
@@ -68,6 +67,10 @@ The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](htt
 | stickersText | Text captions used in the video | string |
 | videoId | ID number of the video | integer |
 | videoLink | Direkt link to the video add | string |
+
+
+Number of unique video contributions collected the September 2024 dataset is 5661 video records.
+
 
 The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
 -For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Video_DataFrame.ipynb).
