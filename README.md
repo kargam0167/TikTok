@@ -36,9 +36,8 @@ We consolidated multiple JSON files containing scraped data on different hashtag
 - 'author' metadata represents TikTok creator information.
 - 'authorStats,' which contains statistics such as the number of followers and videos published.
 - id: The unique id of the video
-- desc: Description of the video
+- desc: metadata of the video post
 - stats: View and like counts
-- author: Author info like avatar, id, nickname, etc.
 - music: Details about the background music
 - video: Technical details about the video, such as resolution, size, etc.
 
@@ -69,7 +68,7 @@ The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](htt
 | videoLink | Direkt link to the video add | string |
 
 
-Number of unique video contributions collected the September 2024 dataset is 5661 video records.
+The number of unique video contributions collected in the March 2024 dataset is 5117 video records.
 
 
 The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
