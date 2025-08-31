@@ -11,7 +11,7 @@ The dataset is sourced from TikTok and collected through the unofficial [TIKAPI]
     - #travellife
     - #workfromanywhere
     
-TikAPI retrieves all available metadata for TikTok videos associated with a given hashtag and does not limit the results to a percentage of the total. 
+TikAPI retrieves metadata listed below for TikTok videos associated with a given hashtag and does not limit the results to a percentage of the total. 
 
  **[TikAPI documentation](https://tikapi.io/documentation/#tag/Profile)**
 
@@ -41,67 +41,37 @@ We consolidated multiple JSON files containing scraped data on different hashtag
 - music: Details about the background music
 - video: Technical details about the video, such as resolution, size, etc.
 
-We then create two data frames for each unit of the analysis:
+This data management plan is designed to ensure the responsible handling of data:
 
 The code for creating a Video unit dataframe is here [Video_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Video_Dataframe.ipynb) 
--For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Author_DataFrame.ipynb).
+
+To ensure the security of the collected data, the study follows following protocol:
+
+- API Key Security: The TikAPI key should be stored as an environment variable on the server-side and not be exposed in the front-end or version control systems.
+
+- Secure Storage: The collected raw data, which is in JSON format, should be stored in a secure, access-controlled database or a file system with encryption at rest.
+
+- Access Control: Access to the raw data is restricted to authorized personnel only, through the use of strong passwords and role-based access control.
+
 
 **TikTok Video Dataframe**
+
+Only absolutely necessary data points for the study are stored:
+
 | Field | Description | Type |
 | --- | --- | --- |
 | authorId | ID number of the creator profile | integer |
-| commentCount | Number of comments made on the video | integer |
+| videoId | ID number of the video | integer |
 | datetime | UTC stamp of when the TikTok video was uploaded | datetime |
 | desc | The caption from the video | string |
-| diggCount | Number of likes for a video | integer |
-| duetEnabled | Duets to the video are allowed | Boolean |
-| duetFromId | If filled the video is a duet with another video | integer |
 | hashtagNames | Name of the hashtag | string |
-| musicAlbum | The name of the album of the song | string |
-| musicAuthorName | The author of the sound used in the video | string |
-| musicId | ID number for the sound used in a video | integer |
-| musicTitle | The music/sound title | string |
-| playCount | Number of times a video was played | integer |
-| shareCount | Number of times a video was shared | integer |
 | stickersText | Text captions used in the video | string |
-| videoId | ID number of the video | integer |
-| videoLink | Direkt link to the video add | string |
 
 
-The number of unique video contributions collected in the March 2024 dataset is 5117 video records.
+Anonymization is an important step in protecting the privacy of individuals. the following fields are anonymized: videoId and authorId.
 
+Hashing with a salt is a one-way process that has been used to anonymize these identifiers. This method turns the original data into a fixed-size hash, which was used for analysis without exposing the original identifier.
 
-The code for creating an Author unit dataframe is here [Author_Dataframe.ipynb](https://github.com/kargam0167/TikTok/blob/main/Author_Dataframe.ipynb)
--For the current state of our study, we only use the dataset [collected in September](https://github.com/kargam0167/TikTok/blob/main/Video_DataFrame.ipynb).
-
-**TikTok Author Dataframe**
-| Fields | Description | Type |
-| --- | --- | --- |
-| authorId | ID number of the creator profile | Integer |
-| authorUniqueId | The handle of the creator profile | String |
-| authorDiggCount | The number of videos liked by the user | String |
-| authorFollowerCount | Number of accounts following the profile | Integer |
-| authorFollowingCount | Number of accounts the profile is following | Integer |
-| authorHeartCount | Number of likes, in totality, on the profile's posted content | Integer |
-| authorVideoCount | Number of videos posted to the profile in total | Integer |
-| avatarLarger | A full-size version of the profile photo (link will have a quick expiration date) | String |
-| avatarMedium | A medium-sized version of the profile photo (link will have a quick expiration date)avatarThumb | String |
-| avatarThumb | A thumb size of the profile photo (link will have a quick expiration date) | String |
-| commentSetting | who can comment on the user content: 0 = Everyone; 1= Friends; 2= Off | Integer |
-| downloadSetting | 0: Allow anyone to download videos, 1: Allow friends to download videos, 2: Do not allow anyone to download videos, 3: Allow downloads only in specific regions | Integer |
-| duetSetting | 0:Allow anyone to duet videos; 1: Allow friends to duet videos; 2: Do not allow anyone to duet videos | Integer |
-| ftc | False/True, indicates minor under 13 year old | Boolean |
-| isADVirtual | False/True for Virtual influenser, not a real person | Boolean |
-| nickname | Display name of the profile | String |
-| openFavorite | False/True, the user has allowed other users to see their bookmarked videos, sounds, and effects on the web version of TikTok | Boolean |
-| privateAccount | The user's videos and content are/are'nt accessible to the general public | Boolean |
-| relation | 0= No Family pairing feature, 1=Family | Integer |
-| secUid | Unique string of characters to identify the user or their content | String |
-| secret | Whether the account's content is limited in visibility to a select audience or followers. | Boolean |
-| signature | Signature statement in the bio of a profile | String |
-| stitchSetting | Whether creator allowes to stitch their content | Binary |
-| ttSeller | Identify the seller of a product on TikTok | Boolean |
-| verified | #False/True Account is verified | Boolean |
-
-
+The raw data was retained only for the duration of necessary to complete the data processing and anonymization and was securely deleted 30 days after the study completion.
+The anonymized data is retained for a longer period for longitudinal analysis.
 
