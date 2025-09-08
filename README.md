@@ -68,9 +68,9 @@ Only absolutely necessary data points for the study are stored:
 | stickersText | Text captions used in the video | string |
 
 
-Anonymization is an important step in protecting the privacy of individuals. the following fields are anonymized: videoId and authorId.
+Anonymization is an important step in protecting the privacy of individuals. The following fields are anonymized: videoId and authorId.
 
-Hashing with a salt is a one-way process that has been used to anonymize these identifiers. This method turns the original data into a fixed-size hash, which was used for analysis without exposing the original identifier.
+Hashing with a salt is a one-way process that has been used to anonymize these identifiers. This method turns the original data into a fixed-size hash, which was used for analysis without exposing the original identifier. The code is here: [Hashing_code.ipynb](https://github.com/kargam0167/TikTok/blob/main/Hashing_code.ipynb)
 
 The raw data was retained only for the duration of necessary to complete the data processing and anonymization and was securely deleted 30 days after the study completion.
 The anonymized data is retained for a longer period for longitudinal analysis.
