@@ -24,7 +24,7 @@ The **`/hashtag/videos`** endpoint allows you to retrieve TikTok videos associat
 - There is no mention of limiting or sampling the results to a subset of available videos.
 - The pagination parameters allow retrieving all available results across multiple pages, implying that complete retrieval is possible.
 
-The code example [Collect_Hashtags.ipynb](https://github.com/kargam0167/TikTok/blob/main/Collect_hashtags.ipynb) collects data related to the hashtag "#travellife" from TikTok using the Tikapi library. It fetches a maximum of 50 pages of data related to the hashtag and handles possible exceptions that could occur during the process.
+The code example [Collect_Hashtags.ipynb](https://github.com/kargam0167/TikTok/blob/main/Collect_Hashtags.ipynb) collects data related to the hashtag "#travellife" from TikTok using the Tikapi library. It fetches a maximum of 50 pages of data related to the hashtag and handles possible exceptions that could occur during the process.
 
 The above code has been executed six times, once for each hashtag mentioned above. The collected data is stored separately for every hashtag, each time adjusting the filename (e.g., 'digitalnomad.json') to reflect the respective hashtag.
 
