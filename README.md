@@ -126,6 +126,10 @@ Following CSV files include observed values, permutation means, and empirical p-
 
 ***
 
+**Dataset Explorer**
+
+Browse and query the dataset at **[kargam0167.github.io/TikTok](https://kargam0167.github.io/TikTok/)**. Filter by year-month and hashtag, view the timeline distribution, and export filtered results as CSV.
+
 **Data Compliance**
 
 The dataset is reconciled monthly against the TikTok Research API [Batch Compliance endpoint](https://developers.tiktok.com/doc/batch-compliance-apis) to remove deleted, private, or otherwise unavailable content. A multi-pass verification framework submits unhashed video IDs in batches, re-checks flagged deletions until results converge, and updates the public dataset. Real video IDs are processed in memory only and never stored publicly.
